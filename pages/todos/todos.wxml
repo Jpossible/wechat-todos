@@ -1,0 +1,24 @@
+<!--pages/todos/todos.wxml-->
+<view class='todos'>
+  <view class='search'>
+    <image src='../../img/add.png' bindtap='addTodoHandle' ></image>
+    <input placeholder='todos...' bindinput='inputTodoHandle' bindconfirm='addTodoHandle' value='{{ sinput }}'/>
+  </view>
+  <block wx:if='{{todos.length > 0}}'>
+    <view class='list'>
+        <view class='item'  wx:for='{{ todos }}' wx:key='{{index}}'>
+         <icon type="{{item.complete ? 'success' : 'circle' }}" size="20" bindtap='toggleTodos' data-index='{{index}}'/>
+         <text class="{{item.complete ? 'del' : '' }}">{{ item.name }}</text>
+         <icon type="clear" size="20" bindtap='delTodoHandle' data-index='{{index}}'/>
+      </view>
+    </view>
+    <view class='footer'>
+      <text bindtap='selectAll'>Toggle All</text>
+      <text wx:if="{{count}}">{{count}} Item{{count>1?'s':''}}</text>
+      <text bindtap='clearComplete'>Clear Complete</text>
+    </view>
+  </block>
+  <view class='empty' wx:else>
+      Currently no todo
+  </view>
+</view>

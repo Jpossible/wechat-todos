@@ -1,0 +1,13 @@
+/**app.wxss**/
+.todos{
+  padding:10rpx;
+  border-top: 1rpx solid #dadada;
+}
+.search{
+  border: 1rpx solid #dadada;
+  border-radius: 5rpx;
+}
+.search img{
+  width: 30px;
+  height: 30px;
+}

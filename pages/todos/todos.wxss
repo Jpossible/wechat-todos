@@ -1,0 +1,57 @@
+/* pages/todos/todos.wxss */
+.todos{
+  padding:10rpx;
+  border-top: 1rpx solid #dadada;
+  font-size: 14px;
+  color: #74818e;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+  border: 1rpx solid #dadada;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx 0 #dadada;
+}
+.search image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.search input{
+  margin-left: 10rpx;
+}
+.list{
+  margin-top: 3px;
+  border: 1rpx solid #dadada;
+  border-radius: 5rpx;
+  box-shadow: 0 3rpx 3rpx 0 #dadada;
+}
+.list .item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1rpx solid #dadada;
+}
+.list .item .del{
+  color: #dadada;
+  text-decoration: line-through;
+}
+.list .item text{
+  flex: 1;
+  margin-left: 10px;
+}
+.list .item:last-child{
+  border-bottom:none;
+}
+.footer {
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: space-between;
+}
+.empty{
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bolder;
+  color: #dadada
+}
